@@ -16,43 +16,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bce-lR-au1">
-                                <rect key="frame" x="100" y="712" width="214" height="50"/>
-                                <color key="backgroundColor" systemColor="tintColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="12T-57-GWU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="22"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="New activity">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the button to create a new activity!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-WR-bpA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the button to create a new activity!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-WR-bpA">
                                 <rect key="frame" x="20" y="248" width="374" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="h4Z-X9-QJt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGray4Color"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HS-ny-uy3">
+                                <rect key="frame" x="100" y="712" width="214" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SZi-hj-Qs4"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="ActivityButton:" destination="Kb8-oi-Xc8" eventType="touchUpInside" id="lcu-fC-HSb"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-V6-mRz">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRj-WN-84x"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="1HS-ny-uy3" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="100" id="1Pq-Md-OTa"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="IbC-QA-UZt"/>
-                            <constraint firstItem="Bce-lR-au1" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="100" id="Mcr-zs-PjN"/>
+                            <constraint firstItem="1HS-ny-uy3" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="KQZ-jL-yEr"/>
+                            <constraint firstItem="dRj-WN-84x" firstAttribute="bottom" secondItem="1HS-ny-uy3" secondAttribute="bottom" constant="100" id="Rz5-z1-P9O"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="20" id="bcG-3A-Lu3"/>
-                            <constraint firstItem="Bce-lR-au1" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="eDg-Wd-Snq"/>
-                            <constraint firstItem="dRj-WN-84x" firstAttribute="bottom" secondItem="Bce-lR-au1" secondAttribute="bottom" constant="100" id="oe2-7w-X7M"/>
+                            <constraint firstItem="JEe-V6-mRz" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="eiT-Sd-RGv"/>
                             <constraint firstItem="dRj-WN-84x" firstAttribute="trailing" secondItem="fgN-WR-bpA" secondAttribute="trailing" constant="20" id="pt2-jg-epd"/>
+                            <constraint firstItem="JEe-V6-mRz" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="sl1-8S-TCh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="Au7-wa-vlp"/>
                     <connections>
-                        <outlet property="ActivityButton" destination="Bce-lR-au1" id="T3w-O6-ifg"/>
-                        <outlet property="ActivityLabel" destination="fgN-WR-bpA" id="CV5-ti-rGL"/>
+                        <outlet property="activityButton" destination="1HS-ny-uy3" id="T7y-nO-eWT"/>
+                        <outlet property="activityIndicator" destination="JEe-V6-mRz" id="Zk7-Sz-zWJ"/>
+                        <outlet property="activityLabel" destination="fgN-WR-bpA" id="CV5-ti-rGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdC-Gx-5lu" sceneMemberID="firstResponder"/>
@@ -84,12 +89,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
