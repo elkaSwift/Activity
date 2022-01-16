@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1cr-2e-Hng">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,51 +13,48 @@
             <objects>
                 <viewController id="Kb8-oi-Xc8" customClass="ActivityViewController" customModule="Activity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HL2-S1-5ZS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on the button to create a new activity!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgN-WR-bpA">
-                                <rect key="frame" x="20" y="248" width="374" height="400"/>
+                                <rect key="frame" x="20" y="256" width="335" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="400" id="h4Z-X9-QJt"/>
+                                    <constraint firstAttribute="height" constant="300" id="h4Z-X9-QJt"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1HS-ny-uy3">
-                                <rect key="frame" x="100" y="712" width="214" height="50"/>
+                                <rect key="frame" x="70" y="678" width="235" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SZi-hj-Qs4"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New activity">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                </buttonConfiguration>
                                 <connections>
-                                    <action selector="ActivityButton:" destination="Kb8-oi-Xc8" eventType="touchUpInside" id="lcu-fC-HSb"/>
+                                    <action selector="activityButton:" destination="Kb8-oi-Xc8" eventType="touchUpInside" id="MPv-GL-jB3"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JEe-V6-mRz">
-                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRj-WN-84x"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="1HS-ny-uy3" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="100" id="1Pq-Md-OTa"/>
+                            <constraint firstItem="1HS-ny-uy3" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="70" id="1Pq-Md-OTa"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="IbC-QA-UZt"/>
                             <constraint firstItem="1HS-ny-uy3" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="KQZ-jL-yEr"/>
-                            <constraint firstItem="dRj-WN-84x" firstAttribute="bottom" secondItem="1HS-ny-uy3" secondAttribute="bottom" constant="100" id="Rz5-z1-P9O"/>
+                            <constraint firstItem="dRj-WN-84x" firstAttribute="bottom" secondItem="1HS-ny-uy3" secondAttribute="bottom" constant="50" id="Rz5-z1-P9O"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="20" id="bcG-3A-Lu3"/>
-                            <constraint firstItem="JEe-V6-mRz" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="eiT-Sd-RGv"/>
                             <constraint firstItem="dRj-WN-84x" firstAttribute="trailing" secondItem="fgN-WR-bpA" secondAttribute="trailing" constant="20" id="pt2-jg-epd"/>
-                            <constraint firstItem="JEe-V6-mRz" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="sl1-8S-TCh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="Au7-wa-vlp"/>
                     <connections>
-                        <outlet property="activityButton" destination="1HS-ny-uy3" id="T7y-nO-eWT"/>
-                        <outlet property="activityIndicator" destination="JEe-V6-mRz" id="Zk7-Sz-zWJ"/>
-                        <outlet property="activityLabel" destination="fgN-WR-bpA" id="CV5-ti-rGL"/>
+                        <outlet property="activityButton" destination="1HS-ny-uy3" id="r3w-C3-hE5"/>
+                        <outlet property="activityLabel" destination="fgN-WR-bpA" id="JEd-VY-eU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LdC-Gx-5lu" sceneMemberID="firstResponder"/>
@@ -70,10 +67,15 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1cr-2e-Hng" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="7dt-4u-NB8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                            <color key="textColor" systemColor="systemBackgroundColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -89,6 +91,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

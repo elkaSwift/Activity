@@ -13,32 +13,48 @@ enum Link: String {
 
 class ActivityViewController: UIViewController {
     
+   
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var activityButton: UIButton!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    
     
     var activity: Activity!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        activityIndicator.startAnimating()
+        activityButton.layer.cornerRadius = 10
+        activityButton.backgroundColor = .clear
+        activityButton.layer.cornerRadius = 10
+        activityButton.layer.borderWidth = 3
+        activityButton.layer.borderColor = UIColor.white.cgColor
+        
+        let firstColor = UIColor(red: 58 / 255, green: 17 / 255, blue: 135 / 255, alpha: 1).cgColor
+        let secondColor = UIColor(red: 146 / 255, green: 69 / 255, blue: 144 / 255, alpha: 1).cgColor
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = self.view.bounds
+        gradientLayer.colors = [firstColor, secondColor]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 1, y: 1)
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
+
     
     @IBAction func activityButton(_ sender: UIButton) {
         exampleOneButtonPressed()
         if ((activity ?? nil) != nil) {
             activityLabel.text = """
-Activity: \(activity.activity)
-Type: \(activity.type)
-Participants: \(activity.participants)
-Price: \(activity.price)
+activity: \(activity.activity)
+type: \(activity.type)
+participants: \(activity.participants)
+price: \(activity.price)
 link: \(activity.link)
-Key: \(activity.key)
-Accessibility: \(activity.accessibility)
+key: \(activity.key)
+accessibility: \(activity.accessibility)
 """
-            
         } else {
-         print("error")
+            print("error")
         }
     }
     
