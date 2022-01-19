@@ -29,7 +29,10 @@ class ActivityViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func activityButton(_ sender: UIButton) {
-       
+        NetworkManager.shared.fetchData(url: Link.exampleOne.rawValue) { activity in
+            self.activityLabel.text = activity.description
+        }
+        reloadInputViews()
     }
     
     private func getGradient() {
