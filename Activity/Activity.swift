@@ -15,4 +15,16 @@ struct Activity: Decodable {
     let link: String
     let key: String
     let accessibility: Double
+    
+    var description: String {
+                    """
+        activity: \(activity)
+        type: \(type)
+        participants: \(participants)
+        price: \(price)
+        link: \(link)
+        key: \(key)
+        accessibility: \(accessibility)
+        """
+    }
 }
