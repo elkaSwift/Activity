@@ -14,6 +14,7 @@
 		1C059CA52794B20800A7CFF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C059CA42794B20800A7CFF8 /* Assets.xcassets */; };
 		1C059CA82794B20800A7CFF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C059CA62794B20800A7CFF8 /* LaunchScreen.storyboard */; };
 		1C059CB02794B2AC00A7CFF8 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C059CAF2794B2AC00A7CFF8 /* Activity.swift */; };
+		1C9F657E279844470021C187 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F657D279844470021C187 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1C059CA72794B20800A7CFF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C059CA92794B20800A7CFF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C059CAF2794B2AC00A7CFF8 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		1C9F657D279844470021C187 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				1C059C9B2794B20600A7CFF8 /* AppDelegate.swift */,
 				1C059C9D2794B20600A7CFF8 /* SceneDelegate.swift */,
 				1C059C9F2794B20600A7CFF8 /* ActivityViewController.swift */,
+				1C9F657D279844470021C187 /* NetworkManager.swift */,
 				1C059CAF2794B2AC00A7CFF8 /* Activity.swift */,
 				1C059CA12794B20600A7CFF8 /* Main.storyboard */,
 				1C059CA42794B20800A7CFF8 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				1C059CA02794B20600A7CFF8 /* ActivityViewController.swift in Sources */,
 				1C059C9C2794B20600A7CFF8 /* AppDelegate.swift in Sources */,
+				1C9F657E279844470021C187 /* NetworkManager.swift in Sources */,
 				1C059CB02794B2AC00A7CFF8 /* Activity.swift in Sources */,
 				1C059C9E2794B20600A7CFF8 /* SceneDelegate.swift in Sources */,
 			);
