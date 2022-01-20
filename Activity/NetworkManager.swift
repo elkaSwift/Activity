@@ -12,7 +12,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchAlamofire(completion: @escaping(Activity) -> Void) {
+    func fetchDataUsingAlamofire(completion: @escaping(Activity) -> Void) {
         AF.request(Link.exampleOne.rawValue, method: .get)
             .validate()
             .responseJSON { dataResponse in
