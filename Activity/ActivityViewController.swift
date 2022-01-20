@@ -13,7 +13,7 @@ enum Link: String {
 }
 
 class ActivityViewController: UIViewController {
-    
+
     //MARK: - IBOutlets
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var activityButton: UIButton!
@@ -33,12 +33,16 @@ class ActivityViewController: UIViewController {
     //MARK: - IBActions
     @IBAction func activityButton(_ sender: UIButton) {
         activityIndicatorStart()
-        
-        NetworkManager.shared.fetchData(url: Link.exampleOne.rawValue) { activity in
+        NetworkManager.shared.fetchDataUsingAlamofire { activity in
             self.activityLabel.text = activity.description
             self.activityIndicatorStop()
         }
-        reloadInputViews()
+        
+//        NetworkManager.shared.fetchData(url: Link.exampleOne.rawValue) { activity in
+//            self.activityLabel.text = activity.description
+//            self.activityIndicatorStop()                      
+//        }
+//        reloadInputViews()
     }
     
     //MARK: - Private methods
