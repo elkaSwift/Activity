@@ -39,21 +39,27 @@
                                     <action selector="activityButton:" destination="Kb8-oi-Xc8" eventType="touchUpInside" id="MPv-GL-jB3"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Wsl-zV-4u5">
+                                <rect key="frame" x="169" y="387.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dRj-WN-84x"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="1HS-ny-uy3" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="70" id="1Pq-Md-OTa"/>
+                            <constraint firstItem="Wsl-zV-4u5" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="2sG-DD-GDi"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="IbC-QA-UZt"/>
                             <constraint firstItem="1HS-ny-uy3" firstAttribute="centerX" secondItem="HL2-S1-5ZS" secondAttribute="centerX" id="KQZ-jL-yEr"/>
                             <constraint firstItem="dRj-WN-84x" firstAttribute="bottom" secondItem="1HS-ny-uy3" secondAttribute="bottom" constant="50" id="Rz5-z1-P9O"/>
                             <constraint firstItem="fgN-WR-bpA" firstAttribute="leading" secondItem="dRj-WN-84x" secondAttribute="leading" constant="20" id="bcG-3A-Lu3"/>
                             <constraint firstItem="dRj-WN-84x" firstAttribute="trailing" secondItem="fgN-WR-bpA" secondAttribute="trailing" constant="20" id="pt2-jg-epd"/>
+                            <constraint firstItem="Wsl-zV-4u5" firstAttribute="centerY" secondItem="HL2-S1-5ZS" secondAttribute="centerY" id="uRU-nf-fua"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Activity" id="Au7-wa-vlp"/>
                     <connections>
                         <outlet property="activityButton" destination="1HS-ny-uy3" id="r3w-C3-hE5"/>
+                        <outlet property="activityIndicator" destination="Wsl-zV-4u5" id="mnQ-hX-7hx"/>
                         <outlet property="activityLabel" destination="fgN-WR-bpA" id="JEd-VY-eU0"/>
                     </connections>
                 </viewController>

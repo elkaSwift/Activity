@@ -16,6 +16,7 @@ class ActivityViewController: UIViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var activityButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +24,34 @@ class ActivityViewController: UIViewController {
         activityButton.layer.cornerRadius = 10
         activityButton.layer.borderWidth = 3
         activityButton.layer.borderColor = UIColor.white.cgColor
+        activityIndicator.alpha = 0
         
         getGradient()
     }
     
     //MARK: - IBActions
     @IBAction func activityButton(_ sender: UIButton) {
+        activityIndicatorStart()
+        
         NetworkManager.shared.fetchData(url: Link.exampleOne.rawValue) { activity in
             self.activityLabel.text = activity.description
+            self.activityIndicatorStop()
         }
         reloadInputViews()
+    }
+    
+    //MARK: - Private methods
+    private func activityIndicatorStart() {
+        if activityLabel.text != "" {
+            activityLabel.text = ""
+            activityIndicator.startAnimating()
+            activityIndicator.alpha = 1
+        }
+    }
+    
+    private func activityIndicatorStop() {
+        activityIndicator.stopAnimating()
+        activityIndicator.alpha = 0
     }
     
     private func getGradient() {
@@ -47,6 +66,7 @@ class ActivityViewController: UIViewController {
     }
 }
     
+
 
 
 
