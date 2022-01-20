@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 enum Link: String {
     case exampleOne = "https://www.boredapi.com/api/activity"
