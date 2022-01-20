@@ -16,6 +16,16 @@ struct Activity: Decodable {
     let key: String
     let accessibility: Double
     
+    init(activityData: [String: Any]) {
+        activity = activityData["activity"] as? String ?? ""
+        type = activityData["type"] as? String ?? ""
+        participants = activityData["participants"] as? Int ?? 0
+        price = activityData["price"] as? Double ?? 0
+        link = activityData["link"] as? String ?? ""
+        key = activityData["key"] as? String ?? ""
+        accessibility = activityData["accessibility"] as? Double ?? 0
+    }
+    
     var description: String {
                     """
         activity: \(activity)
